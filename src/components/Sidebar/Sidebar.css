@@ -1,0 +1,22 @@
+.sidebar {
+  width: 300px;
+  border-right: 2px solid whitesmoke;
+  padding-right: 10px;
+}
+
+.sidebar_compose {
+  margin: 15px 0 !important;
+  margin-left: 10px !important;
+  padding: 10px !important;
+  color: gray !important;
+  border-radius: 30px !important;
+  font-weight: 600 !important;
+  box-shadow: 0 2px 5px -2px rgba(0, 0, 0, 0.75);
+}
+
+.sidebar_footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
