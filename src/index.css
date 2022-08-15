@@ -8,9 +8,15 @@
 
 body {
   font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  overflow: hidden;
 }
 
 a {
   text-decoration: none;
   color: inherit;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }

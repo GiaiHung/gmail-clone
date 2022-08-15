@@ -1,10 +1,10 @@
-import {configureStore} from '@reduxjs/toolkit'
-import userSlice from '../features/userSlice'
+import { configureStore } from '@reduxjs/toolkit'
+import mailSlice from '../features/mailSlice'
 
 const store = configureStore({
-    reducer: {
-        user: userSlice.reducer
-    }
+  reducer: {
+    mail: mailSlice.reducer,
+  },
 })
 
 export default store

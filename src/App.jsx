@@ -7,6 +7,7 @@ import Email from './components/Email/Email'
 
 import './App.css'
 import Emails from './components/EmailList/Emails'
+import SendMail from './components/SendMail/SendMail'
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/email/:id" element={<Email />} />
         </Routes>
       </div>
+      <SendMail />
     </div>
   )
 }
