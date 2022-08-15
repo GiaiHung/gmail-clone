@@ -52,7 +52,6 @@
   outline: none;
   border: none;
   border-bottom: 1px solid rgb(219, 219, 219);
-  text-transform: capitalize;
 }
 
 .sendMail_message {
@@ -71,4 +70,11 @@
 
 .sendMail_options {
     margin: 15px;
+}
+
+.sendMail_error {
+  color: red;
+  text-align: right;
+  padding: 2px;
+  font-family: inherit;
 }

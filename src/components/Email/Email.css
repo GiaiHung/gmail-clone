@@ -39,6 +39,7 @@
 .email_body_message {
   overflow-wrap: break-word;
   margin-right: 20px;
+  margin-top: 20px;
 }
 
 .email_time {

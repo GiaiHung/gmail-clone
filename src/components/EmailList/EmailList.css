@@ -1,6 +1,5 @@
 .emailList {
   width: 100%;
-  overflow: scroll;
   padding-left: 10px;
 }
 
@@ -17,7 +16,9 @@
 
 .emailList_sections {
   position: sticky;
-  top: 0;
+  top: 43px;
+  background-color: white;
   display: flex;
   align-items: center;
+  z-index: 999;
 }

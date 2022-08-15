@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { useSelector } from 'react-redux'
+import { getMailSelected } from '../../features/mailSlice'
 import './Email.css'
 
 import { IconButton } from '@mui/material'
@@ -12,11 +14,14 @@ import WatchlaterIcon from '@mui/icons-material/WatchLater'
 import CheckCircleIcon from '@mui/icons-material/CheckCircle'
 import LabelImportantIcon from '@mui/icons-material/LabelImportant'
 import MoreVertIcon from '@mui/icons-material/MoreVert'
-import UnfoldMoreIcon from "@mui/icons-material/UnfoldMore";
-import PrintIcon from "@mui/icons-material/Print";
-import ExitToAppIcon from "@mui/icons-material/ExitToApp";
+import UnfoldMoreIcon from '@mui/icons-material/UnfoldMore'
+import PrintIcon from '@mui/icons-material/Print'
+import ExitToAppIcon from '@mui/icons-material/ExitToApp'
 
 function Email() {
+  const data = useSelector(getMailSelected)
+  const { title, subject, time, description } = data
+  
   return (
     <div className="email">
       <div className="email_tools">
@@ -66,13 +71,13 @@ function Email() {
 
       <div className="email_body">
         <div className="email_body_header">
-          <h2>This is title</h2>
-          <LabelImportantIcon className="mail__important"/>
-          <p>body</p>
-          <p className='email_time'>10pm</p>
+          <h2>{title}</h2>
+          <LabelImportantIcon className="mail__important" />
+          <p>{subject}</p>
+          <p className="email_time">{time}</p>
         </div>
 
-        <div className="email_body_message">This is the message from user</div>
+        <div className="email_body_message">{description}</div>
       </div>
     </div>
   )

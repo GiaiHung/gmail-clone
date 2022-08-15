@@ -17,6 +17,9 @@
 }
 
 .emailRow_title {
+    width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
     font-size: 14px;
     padding-right: 30px;
 }
