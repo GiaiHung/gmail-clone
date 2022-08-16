@@ -71,8 +71,9 @@ function Email() {
 
       <div className="email_body">
         <div className="email_body_header">
-          <h2>{title}</h2>
-          <LabelImportantIcon className="mail__important" />
+          <h2>{title}
+          <span><LabelImportantIcon className="mail__important" /></span>
+          </h2>
           <p>{subject}</p>
           <p className="email_time">{time}</p>
         </div>
