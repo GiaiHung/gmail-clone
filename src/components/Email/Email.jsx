@@ -21,7 +21,7 @@ import ExitToAppIcon from '@mui/icons-material/ExitToApp'
 function Email() {
   const data = useSelector(getMailSelected)
   const { title, subject, time, description } = data
-  
+
   return (
     <div className="email">
       <div className="email_tools">
@@ -71,14 +71,17 @@ function Email() {
 
       <div className="email_body">
         <div className="email_body_header">
-          <h2>{title}
-          <span><LabelImportantIcon className="mail__important" /></span>
+          <h2>
+            {title}
+            <span>
+              <LabelImportantIcon className="mail__important" />
+            </span>
           </h2>
           <p>{subject}</p>
-          <p className="email_time">{time}</p>
         </div>
 
         <div className="email_body_message">{description}</div>
+        <p className="email_time">{time}</p>
       </div>
     </div>
   )
