@@ -11,6 +11,7 @@
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  z-index: 1001;
 }
 
 .sendMail_header {
@@ -77,4 +78,11 @@
   text-align: right;
   padding: 2px;
   font-family: inherit;
+}
+
+@media screen and (max-width: 768px) {
+  .sendMail {
+    width: 90%;
+    margin: auto;
+  }
 }

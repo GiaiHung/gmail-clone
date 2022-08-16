@@ -3,7 +3,7 @@
   border-right: 2px solid whitesmoke;
   padding-right: 10px;
   background-color: #fff;
-  z-index: 999;
+  z-index: 1000;
 }
 
 .sidebar_compose {
@@ -23,7 +23,7 @@
   gap: 1em;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .sidebar {
     visibility: hidden;
     position: absolute;
@@ -31,7 +31,7 @@
     height: 100vh;
     transition: all 0.3s ease-in-out;
     background-color: #fff;
-    z-index: 999;
+    z-index: 1000;
   }
 
   .sidebar_open {
