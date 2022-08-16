@@ -18,11 +18,11 @@ import PhoneIcon from '@mui/icons-material/Phone'
 import { useDispatch } from 'react-redux'
 import { openSendMessage } from '../../features/mailSlice'
 
-function Sidebar() {
+function Sidebar({ sidebarActive }) {
   const dispatch = useDispatch()
 
   return (
-    <div className="sidebar">
+    <div className={`sidebar ${sidebarActive && 'sidebar_open'}`}>
       <Button
         startIcon={<AddIcon fontSize="large" />}
         className="sidebar_compose"

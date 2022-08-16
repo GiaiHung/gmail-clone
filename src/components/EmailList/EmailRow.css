@@ -1,5 +1,6 @@
 .emailRow {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   height: 50px;
   border-bottom: 1px solid whitesmoke;
@@ -13,37 +14,68 @@
 }
 
 .emailRow_options {
-    display: flex;
+  display: flex;
 }
 
 .emailRow_title {
-    width: 200px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-size: 14px;
-    padding-right: 30px;
+  width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 14px;
+  padding-right: 30px;
 }
 
 .emailRow_message {
-    display: flex;
-    flex: 0.9;
-    align-items: center;
-    font-size: 15px;
+  display: flex;
+  flex: 0.9;
+  align-items: center;
+  font-size: 15px;
 }
 
 .emailRow_message > h4 {
-    padding: 0 10px;
+  padding: 0 10px;
 }
 
 .emailRow_description {
-    font-weight: 400;
-    color: gray;
-    width: 350px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+  font-weight: 400;
+  color: gray;
+  width: 350px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .emailRow_time {
-    font-weight: bold;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  .emailRow {
+    position: relative;
+    height: fit-content;
+  }
+
+  .emailRow_time {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    font-size: 13px;
+    font-weight: 400;
+    color: gray;
+  }
+
+  .emailRow_message {
+    max-width: 300px;
+  }
+
+  .emailRow_message > h4 {
+    width: 150px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .emailRow_title {
+    width: 150px;
+  }
 }

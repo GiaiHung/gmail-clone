@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { Routes, Route } from 'react-router-dom'
 
 import Header from './components/Header/Header'
@@ -20,6 +20,7 @@ import { onAuthStateChanged } from 'firebase/auth'
 function App() {
   const isSendMailActive = useSelector(setSendMailActive)
   const user = useSelector(selectUser)
+  const [sidebarActive, setSidebarActive] = useState(false)
 
   const dispatch = useDispatch()
 
@@ -45,9 +46,9 @@ function App() {
         <Login />
       ) : (
         <div className="app">
-          <Header />
+          <Header sidebarActive={sidebarActive} setSidebarActive={setSidebarActive} />
           <div className="app_body">
-            <Sidebar />
+            <Sidebar sidebarActive={sidebarActive} />
             <Routes>
               <Route path="/" element={<EmailList />}>
                 <Route index element={<Emails />} />

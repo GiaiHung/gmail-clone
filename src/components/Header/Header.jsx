@@ -12,7 +12,7 @@ import { auth } from '../../firebase'
 import { useDispatch, useSelector } from 'react-redux'
 import { logout, selectUser } from '../../features/userSlice'
 
-function Header() {
+function Header({ sidebarActive, setSidebarActive }) {
   const dispatch = useDispatch()
   const signout = () => {
     signOut(auth).then(() => dispatch(logout()))
@@ -20,10 +20,14 @@ function Header() {
 
   const user = useSelector(selectUser)
 
+  const handleSidebarActive = () => {
+    setSidebarActive(!sidebarActive)
+  }
+
   return (
     <div className="header">
       <div className="header_left">
-        <IconButton>
+        <IconButton onClick={handleSidebarActive}>
           <MenuIcon />
         </IconButton>
         <img src="/images/logo-gmail.png" alt="header-image" />
@@ -35,7 +39,7 @@ function Header() {
       </div>
       <div className="header_right">
         <IconButton>
-          <AppsIcon />
+          <AppsIcon onClick={handleSidebarActive} />
         </IconButton>
         <IconButton>
           <NotificationsIcon />
